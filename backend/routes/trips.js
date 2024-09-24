@@ -1,16 +1,34 @@
 var express = require('express');
 var router = express.Router();
 
+var moment = require('moment');
+
 const Trip = require('../models/trip');
 
 /* GET trips listing. */
-router.get('/:departure/:arrival/:date', (req, res) =>{
-  Trip.find({departure: req.params.departure, arrival: req.params.arrival, date: req.params.date})
-  .then(data=> {
-      console.log('AllTrips =>', data)
+// router.get('/:departure/:arrival/:date', (req, res) => {
+//   const dateFormatted = new Date(req.params.date)
+//   let newDate = moment(dateFormatted).startOf('day') && moment(dateFormatted).endOf('day');
+//   console.log(newDate)
+//   Trip.find({ departure: req.params.departure, arrival: req.params.arrival, date: newDate })
+//     .then(data => {
+//       console.log('AllTrips =>', data)
+
+//       res.json(data);
+//     })
+// });
+
+router.get('/:departure/:arrival/:date', (req, res) => {
+  const dateFormatted = new Date(req.params.date)
+ 
+    Trip.find({departure: req.params.departure, arrival: req.params.arrival,  expr: { $gte: [moment(dateFormatted).startOf('day') ], $lte: [ moment(dateFormatted).endOf('day') ]}})
+    .then(data => {
+    console.log('AllTrips =>', data)
+
 
     res.json(data);
-  })
+
+})
 });
 
 
