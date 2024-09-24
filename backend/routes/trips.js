@@ -4,8 +4,8 @@ var router = express.Router();
 const Trip = require('../models/trip');
 
 /* GET trips listing. */
-router.get('/', (req, res) =>{
-  Trip.find().then(data=> {
+router.get('/:departure/:arrival/:date', (req, res) =>{
+  Trip.find({departure: req.params.departure, arrival: req.params.arrival, date: req.params.date}).then(data=> {
     console.log('AllTrips =>', data)
   
 
