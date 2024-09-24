@@ -1,8 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
+const Trip = require('../models/trip');
+
+/* GET trips listing. */
+router.get('/:departure/:arrival/:date', function(req, res) {
+
+
+
   res.send('respond with a resource');
 });
 
