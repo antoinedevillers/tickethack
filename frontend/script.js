@@ -37,7 +37,6 @@ fetch(`http://localhost:3000/trips/${departure}/${arrival}/${date}`)
     
     })
     
-<<<<<<< HEAD
     
 });
 
@@ -59,9 +58,7 @@ for (let i = 0; i < document.querySelectorAll('.buttonBook').length; i++) {
         });
 });
 }
-=======
 });*/
->>>>>>> bc5f418154e1ae3344fe3fa11cb3452086cd4f4c
 //Quand on clique, on ajoute un trip dans notre panier
 // document.querySelector('#???').addEventListener('click', function () {
 //     const departure = document.querySelector('#departureInput').textContent;
