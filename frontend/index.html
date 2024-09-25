@@ -1,28 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>TicketHack</title>
 </head>
+
 <body>
     <div id="container">
-        <div id="partie haute">
-            <h1>Explore the world effortlessly by train !</h1>
-            <p>Compare, book and enjoy cheap prices for train tickets: your journey starts on Tickethack.</p>
-        </div>
-        <div id="left">
-            <input id="departureInput" type="departure" name="Departure"/>
-            <input id = "arrivalInput" type="arrival" name="Arrival"/>
-            <div id="calendrier">
-                <input id ="dateInput" type="date"/>
+        <header>
+            <div>
+                <a id="logo" href="index.html">Tickethack</a>
             </div>
-            <button type="button" img="search" id ="search">Search</button>
+            <nav>
+                <ul>
+                    <a class="button" href="card.html">Cart</a>
+                    <a class="button" href="bookings.html">Bookings</a>
+                </ul>
+            </nav>
+        </header>
+        <div id="partieHaute">
+            <h1>Explore the world effortlessly by train !</h1>
+            <h3>Compare, book and enjoy cheap prices for train tickets: your journey starts on Tickethack.</h3>
         </div>
-        <div id="right">
-            <div id="resultat">résultat de la recherche</div>
+        <div id="containerBlocks">
+            <div class='block' id="left">
+                <div class='arrivalDeparture'>
+                    <input id="departureInput" type="departure" name="Departure" placeholder="Departure" />
+                    <input id="arrivalInput" type="arrival" name="Arrival" placeholder="Arrival" />
+                </div>
+                <div id="calendrier">
+                    <input id="dateInput" type="date" />
+                </div>
+                <button type="button" img="search" id="search">Search</button>
+            </div>
+           
+                <div id="resultat" class='block'>
+                    
+                </div>
+            
         </div>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>

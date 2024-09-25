@@ -1,30 +1,51 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Cart</title>
 </head>
+
 <body>
+    <header>
+        <div>
+            <a id="logo" href="index.html">Tickethack</a>
+        </div>
+        <nav>
+            <ul>
+                <a class="button" href="card.html">Cart</a>
+                <a class="button" href="bookings.html">Bookings</a>
+            </ul>
+        </nav>
+    </header>
 
     <div>
-        <h3>My cart</h3>
-        <div id="listCart">
-        
-                <div class='container-trip'>
-                    <div id='trip'>Paris -> Lyon</div>
-                    <div id='departureTime'>20:09</div>
-                    <div id='priceTrip'>103€</div>
-                    <button id='deleteTrip'>X</button>
+        <div class="container">
+            <div id="containerBooking">
+
+                <h4>My cart</h4>
+                <div id="listCart">
+
+                    <div class='container-trip'>
+                        <div id='trip'>Paris -> Lyon</div>
+                        <div id='departureTime'>20:09</div>
+                        <div id='priceTrip'>103€</div>
+                        <button id='deleteTrip'>X</button>
+                    </div>
+
                 </div>
-            
-        </div>
-        
-        <div id = 'containerTotalCost'>
-            <div>Total: <span id='price'>230</span>€</div>
-            <button id="purchase">Purchase</button>
+
+                
+            </div>
+            <div id='containerTotalCost'>
+                <div>Total: <span id='price'>230</span>€</div>
+                <button id="purchase">Purchase</button>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
