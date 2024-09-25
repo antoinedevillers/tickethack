@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Bookings</title>
 </head>
+
 <body>
+    <header>
+        <div>
+            <a id="logo" href="index.html">Tickethack</a>
+        </div>
+        <nav>
+            <ul>
+                <a class="button" href="card.html">Cart</a>
+                <a class="button" href="bookings.html">Bookings</a>
+            </ul>
+        </nav>
+    </header>
 
     <div>
-        <h3>My bookings</h3>
-        <ul>
-            <li>
+        
+        <div class="container">
+            <div id="containerBooking">
+                <h4>My bookings</h4>
                 <div class='container-trip'>
-                    <div id= 'trip'>Paris > Lyon</div>
-                    <div id ='departureTime'>20:09</div>
-                    <div id ='priceTrip'>103€</div>
-                    <div id= 'departureTimeLeft'>Departure in 5 hours</div>
+                    <div id='trip'>Paris > Lyon</div>
+                    <div id='departureTime'>20:09</div>
+                    <div id='priceTrip'>103€</div>
+                    <div id='departureTimeLeft'>Departure in 5 hours</div>
                 </div>
-            </li>
-        </ul>
-        <div id = 'messageEnjoy'>Enjoy your travels with Tickethack!</div>
+                <p id='messageEnjoy'>Enjoy your travels with Tickethack!</p>
+            </div>
+        </div>
+        
     </div>
-    
+
 </body>
+
 </html>
