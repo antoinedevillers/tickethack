@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 
   /* POST des trips de panier dans booking */
   
-  router.post('/', (req, res) => {
+  router.post('/:id', (req, res) => {
 
     //  const timeLeftCalculated = (Date.parse(Number(req.body.date)) - Date.now) /60000
 
