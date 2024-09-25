@@ -20,8 +20,9 @@ const Trip = require('../models/trip');
 
 router.get('/:departure/:arrival/:date', (req, res) => {
   const dateFormatted = new Date(req.params.date)
+  const dateStartAndEnd =  { $gte: [moment(dateFormatted).startOf('day') ], $lte: [ moment(dateFormatted).endOf('day') ]}
  
-    Trip.find({departure: req.params.departure, arrival: req.params.arrival,  expr: { $gte: [moment(dateFormatted).startOf('day') ], $lte: [ moment(dateFormatted).endOf('day') ]}})
+    Trip.find({departure: req.params.departure, arrival: req.params.arrival,  date: dateStartAndEnd })
     .then(data => {
     console.log('AllTrips =>', data)
 
