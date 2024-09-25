@@ -1,24 +1,28 @@
 // affichage de tous les trajets choisis
 
-fetch('http://localhost:3000/tickethack/bookings/')
+fetch('http://localhost:3000/bookings/')
  .then(response => response.json())
- .then(data => {
-    if (data === null) {
+ .then(data => {console.log(data);
+    /*if (data === null) {
         let vide = 'No tickets in your cart. Why not plan a trip?';
+        console.log(vide);
         return vide;
-    };
+    };*/
+    let totalP = 0;
     for (let i = 0; i < data.length; i++){
         document.querySelector('.container-trip').innerHTML +=
-                `<div id='trip'> ${data[i].departure}  ${data[i].arrival} </div>
-                <div id='departureTime'>${data[i].departureTime}</div>
-                <div id='priceTrip'>${data[i].priceTrip}€</div>
+                `<div id='trip'> ${data[i].departure} -> ${data[i].arrival} </div>
+                <div id='departureTime'>${data[i].date}</div>
+                <div id='priceTrip'>${data[i].price}€</div>
                 <button id='deleteTrip'>X</button>
                 `
-        console.log(data);}
+            totalP += data[i].price;
+        console.log(data[i]);}
+        document.querySelector('#price').innerHTML = totalP;
     });
 
 //affichage du prix total
-document.querySelector('#price');       
+      
 
 // veille sur le/les boutons delete
 
